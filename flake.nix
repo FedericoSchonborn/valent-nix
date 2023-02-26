@@ -26,6 +26,11 @@
       formatter = pkgs.alejandra;
     })
     // {
+      nixosModules = {
+        valent = import ./modules;
+        default = self.nixosModules.valent;
+      };
+
       overlays = {
         valent = _: prev: {
           valent = self.packages.${prev.system}.valent;
