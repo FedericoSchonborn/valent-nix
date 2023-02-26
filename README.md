@@ -1,3 +1,3 @@
 # valent-nix
 
-NixOS module for Valent.
+Nix Flake for [Valent](https://github.com/andyholmes/valent).
