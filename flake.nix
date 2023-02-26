@@ -1,4 +1,6 @@
 {
+  description = "Valent is an implementation of the KDE Connect protocol, built on GNOME platform libraries";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -26,11 +28,6 @@
       formatter = pkgs.alejandra;
     })
     // {
-      nixosModules = {
-        valent = import ./modules;
-        default = self.nixosModules.valent;
-      };
-
       overlays = {
         valent = _: prev: {
           valent = self.packages.${prev.system}.valent;
