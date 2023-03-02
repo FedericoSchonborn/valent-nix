@@ -40,7 +40,7 @@ Nix Flake for [Valent](https://github.com/andyholmes/valent).
 ```nix
 {pkgs, ...}: {
   environment.systemPackages = [
-    pkgs.gnome-shell-extension-valent
+    pkgs.gnomeExtensions.valent
   ];
 }
 ```
@@ -52,7 +52,7 @@ Nix Flake for [Valent](https://github.com/andyholmes/valent).
   dconf = {
     "org/gnome/shell" = {
       enabled-extensions = [
-        pkgs.gnome-shell-extension-valent.extensionUuid
+        pkgs.gnomeExtensions.valent.extensionUuid
       ];
     };
   };
