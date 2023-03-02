@@ -31,7 +31,11 @@
       overlays = {
         valent = _: prev: {
           valent = self.packages.${prev.system}.valent;
-          gnome-shell-extension-valent = self.packages.${prev.system}.gnome-shell-extension-valent;
+          gnomeExtensions =
+            prev.gnomeExtensions
+            // {
+              valent = self.packages.${prev.system}.gnome-shell-extension-valent;
+            };
         };
 
         default = self.overlays.valent;
