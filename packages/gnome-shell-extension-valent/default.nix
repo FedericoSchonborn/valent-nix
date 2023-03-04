@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
     owner = "andyholmes";
     repo = "gnome-shell-extension-valent";
     rev = "dd054951ffbc61f0ffda1c7b2167c6f185c74ab3";
-    sha256 = "sha256-cCwB4bVx00NRYfLrduW0sRjvg3ZneyMr+p/iEMCXI40=";
+    hash = "sha256-cCwB4bVx00NRYfLrduW0sRjvg3ZneyMr+p/iEMCXI40=";
   };
 
   nativeBuildInputs = [
